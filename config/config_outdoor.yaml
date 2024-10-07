@@ -1,0 +1,32 @@
+%YAML:1.0
+
+# binary descriptor
+useful_corner_num: 500  # Maximum number of useful corners
+plane_detection_thre: 0.01  # Threshold for plane detection
+plane_merge_normal_thre: 0.1 # Normal threshold for plane merging
+plane_merge_dis_thre: 0.3   # Distance threshold for plane merging
+voxel_size: 2  # Size of each voxel
+voxel_init_num: 10  # Minimum number of points in a voxel for extraction
+proj_plane_num: 1  # Number of projection planes
+proj_image_resolution: 0.5  # Resolution of the projected image in meters
+proj_image_high_inc: 0.1    # Height increment for the projected image in meters
+proj_dis_min: -1.0  # Minimum distance to the projection plane
+proj_dis_max: 4.0  # Maximum distance to the projection plane
+summary_min_thre: 10  # Minimum number of points in one image grid
+line_filter_enable: 1  # Enable line point filtering (1: enabled, 0: disabled)
+
+# std descriptor
+descriptor_near_num: 10  # Number of neighboring points to save for each point when generating triangles
+descriptor_min_len: 2    # Minimum edge length
+descriptor_max_len: 50   # Maximum edge length
+max_constrait_dis: 2     # Neighborhood range for non-maximum suppression
+triangle_resolution: 0.2  # Edge length amplification coefficient
+
+# candidate search
+skip_near_num: 100  # Number of frames to skip
+candidate_num: 50   # Maximum number of reference frames
+similarity_threshold: 0.7  # BTC similarity coefficient
+rough_dis_threshold: 0.01   # Threshold coefficient for BTC edge length distance
+normal_threshold: 0.2  # Threshold for plane ICP and geometric validation: point-to-plane distance
+dis_threshold: 0.5  # Distance threshold for plane-to-plane validation.
+icp_threshold: 0.2  # Threshold for plane-to-plane ICP to triggle loop.
